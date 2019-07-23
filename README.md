@@ -4,9 +4,9 @@ Sqlmap for lazy people
 An advanced sql injection tools that work with sqlmap to make it more effective. It has more than 12 tamper scripts pre-commanded to run on single click. 
 
 # How to install
-Currently this tool is available only for termux users but i will make it available for all linux distor's soon :)
+To install it in Kali linux and other linux operating systems please refer to this article - https://www.kalilinux.in/2019/03/advanced-sql-injection-in-easy-stapes.html
 
-To install this tool copy paste the following commands 
+To install this tool in termux, copy paste the following commands 
 
 1. git clone https://github.com/cipherhexx/LazySQLi
 2. cd LazySQLi
