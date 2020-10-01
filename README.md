@@ -8,10 +8,11 @@ To install it in Kali linux and other linux operating systems please refer to th
 
 To install this tool in termux, copy paste the following commands 
 
-1. git clone https://github.com/cipherhexx/LazySQLi
-2. cd LazySQLi
-3. chmod +x LazySqli
-4. ./LazySqli
+```
+git clone https://github.com/cipherhexx/LazySQLi
+cd LazySQLi
+./LazySqli
+```
 
 there are no requirements needed :) it will install everything so for the first start it will take 2-3 minutes to start but then next time it will run instantly 
 
